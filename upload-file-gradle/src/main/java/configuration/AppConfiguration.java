@@ -64,7 +64,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     //Cấu hình upload file
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/image/**")
+        registry.addResourceHandler("**")  // cấu hình ** để chỉ các file con nằm sau 2 dấu **.
                 .addResourceLocations("file:" + fileUpload);
 
     }
